@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PemiluApp">
+<head>
+	<meta charset="UTF-8"></meta>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<div id="container" ng-controller="ProfilsCtrl">
+		<div id="nav">
+			<ul>
+				<li><a href="../../index.html">Pemilu</a></li>
+				<li><a href="#">Profil</a>
+					<ul>
+						<li><a href="#">Capres</a>
+							<ul>
+								<li><a href="../profil/ps.html">Prabowo Subianto</a></li>
+								<li><a href="../profil/jw.html">Joko Widodo</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Cawapres</a>
+							<ul>
+								<li><a href="../profil/hr.html">Hatta Rajasa</a></li>
+								<li><a href="../profil/jk.html">Jusuf Kalla</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Janji</a>
+					<ul>
+						<li><a href="#">Capres</a>
+							<ul>
+								<li><a href="../janji/ps.html">Prabowo Subianto</a></li>
+								<li><a href="../janji/jw.html">Joko Widodo</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Cawapres</a>
+							<ul>
+								<li><a href="../janji/hr.html">Hatta Rajasa</a></li>
+								<li><a href="../janji/jk.html">Jusuf Kalla</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="../faq/faq.html">FAQ</a>
+			</ul>
+		</div>
+
+		<section>
+			<div class="profil">
+				<h3>Calon Presiden 2</h3>
+				<img src="../../images/calon/jk.jpg" class="photo">
+				<ul>
+					<div ng-repeat="profil in jkProfil">
+						<li>Nama : {{profil.nama }}</li>
+						<li>Agama : {{profil.agama }}</li>
+						<li>Tempat Lahir : {{profil.tempat_lahir }}</li>
+						<li>Tanggal Lahir : {{profil.tanggal_lahir }}</li>
+						<li>Status Perkawinan : {{profil.status_perkawinan}}</li>
+						<div ng-if="profil.status_perkawinan=='Kawin'">
+						<li>Nama Pasangan : {{profil.nama_pasangan}}</li>
+						</div>
+						<li>Jumlah Anak : {{ profil.jumlah_anak }}</li>
+						<li>Partai : {{ profil.partai.nama }}</li>
+
+						<!-- Biografi -->
+						<li>Biogafi : <br/><br/>
+							<div class="biography">
+								{{ profil.biografi }}
+							</div>							
+						</li>
+
+						<!-- Riwayat Pendidikan -->
+						<li>
+							Riwayat Pendidikan : <br/>
+							<ul>
+								<div ng-repeat="pend in profil.riwayat_pendidikan">
+									<li>{{ pend.tanggal_mulai }} - {{ pend.tanggal_selesai }} : {{ pend.ringkasan }}</li>
+								</div>
+							</ul>
+						</li>
+
+						<!-- Riwayat Pekerjaan -->
+						<li>
+							Riwayat Pekerjaan : <br/>
+							<ul>
+								<div ng-repeat="pend in profil.riwayat_pekerjaan">
+									<li>{{ pend.tanggal_mulai }} - {{ pend.tanggal_selesai }} : {{ pend.ringkasan }}</li>
+								</div>
+							</ul>
+						</li>
+
+						<!-- Riwayat Organisasi -->
+						<li>
+							Riwayat Organisasi : <br/>
+							<ul>
+								<div ng-repeat="pend in profil.riwayat_organisasi">
+									<li>{{ pend.tanggal_mulai }} - {{ pend.tanggal_selesai }} : {{ pend.ringkasan }}</li>
+								</div>
+							</ul>
+						</li>
+
+						<!-- Riwayat Penghargaan -->
+						<li>
+							Riwayat Penghargaan : <br/>
+							<ul>
+								<div ng-repeat="pend in profil.riwayat_penghargaan">
+									<li>"{{ pend.ringkasan }}" - {{ pend.institusi }}</li>
+								</div>
+							</ul>
+						</li>
+						
+						
+					</div>
+				</ul>				
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; Budi Wahyu Herlen A.</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="../../js/angularjs/angular.min.js"></script>
+	<script type="text/javascript" src="../../js/profil.js"></script>
+</body>
+</html>

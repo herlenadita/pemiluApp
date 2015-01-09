@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+
+#container {
+  margin: 20px 200px 20px 200px;
+  height:100px;
+}
+ 
+#nav   ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 8px 6px -6px black;
+  position : relative;
+  font-size: 15px;
+}
+
+#nav   li {
+  font-family: Segoe UI;
+  font-size: 1.2em;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  margin-right: -4px;
+  width:120px;
+  position : relative;
+}
+
+#nav  li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+ 
+#nav  li a:hover {
+  background-color: #b24848;
+  box-shadow: 0 8px 6px -6px black;
+}
+ 
+/*#nav   li a.pemilu,
+#nav   li a.kandidat,
+#nav   li a.janji,
+#nav   li a.video {
+  background-color: #fff;
+  color: #b24848; 
+}*/
+
+/*#nav ul li:hover
+{
+  background:#b24848
+}*/
+
+#nav ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  background:#444;
+  padding:0
+}
+
+#nav ul ul li {
+  float:none;
+  width:100%;
+}
+
+#nav ul ul a :hover {
+  line-height:100%;
+  padding:10px 15px;
+}
+
+#nav ul ul a {
+  line-height:100%;
+  padding:10px 15px;
+}
+
+#nav ul ul ul {
+  top:0;
+  left:98%;
+  width:100%;
+}
+
+#nav ul li:hover > ul {
+  display:block
+}
+
+img .photo{
+  height: 600px;
+  width: 300px;
+}
+
+section{
+  background-color: #f0f0f0;
+  box-shadow: -2px 10px 37px -2px rgba(0,0,0,0.67);
+  padding:10px;
+  margin-bottom: 20px;  
+  overflow: auto;
+}
+
+section .stamp img{
+  display: block;
+  margin:10px auto;  
+  width: 20%;  
+  vertical-align: middle;  
+  /*box-shadow: 0px 2px 38px 6px rgba(0,0,0,0.67);*/
+  /*background-color: #fff;*/
+}
+
+section .calon{
+  float: left;
+  width:47%;
+  margin: 10px;
+  background-color: #ccc;    
+}
+
+@media (max-width: 1024px) {
+  section .calon{
+    width:98%;
+    margin: 10px;
+    background-color: #ccc;    
+  }
+}
+
+section .calon h3{
+  text-align: center;
+  background-color: #b24848;
+  color: #fff;
+  font-family: Segoe UI;
+  margin:  -10px 0px;
+}
+
+section .calon img{
+  display: block;
+  margin:30px auto;
+  padding:10px ;  
+  width: 80%;
+  height: 400px;  
+  vertical-align: middle;  
+  /*box-shadow: 0px 2px 38px 6px rgba(0,0,0,0.67);*/
+  background-color: #fff;
+}
+
+section .calon img:hover{
+  display: block;
+  margin:30px auto;
+  padding:10px ;  
+  width: 80%;
+  height: 400px;  
+  vertical-align: middle;  
+  box-shadow: 0px 2px 38px 6px rgba(0,0,0,0.67);
+  background-color: #fff;
+}
+
+section .calon .tp{
+  text-align: center;
+  font-family: Segoe UI;
+  font-variant: 
+  text-transform: uppercase;
+}
+
+section .profil {
+  background-color: #f0f0f0;  
+  padding:20px;
+  margin: 15px;  
+  overflow: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b24848;
+}
+
+section .justify {
+  text-align: justify;
+}
+
+section .profil h3{
+  text-align: center;
+  background-color: #b24848;
+  color: #fff;
+  font-family: Segoe UI;
+  margin:  -20px ;
+}
+
+section .profil img{
+  display: block;
+  margin:30px auto;
+  padding:10px ;  
+  width: 50%;
+  height: 400px;  
+  vertical-align: middle;  
+  /*box-shadow: 0px 2px 38px 6px rgba(0,0,0,0.67);*/
+  background-color: #fff;
+}
+
+section .calon img:hover{
+  display: block;
+  margin:30px auto;
+  padding:10px ;  
+  width: 80%;
+  height: 400px;  
+  vertical-align: middle;  
+  box-shadow: 0px 2px 38px 6px rgba(0,0,0,0.67);
+  background-color: #fff;
+}
+
+section ul li {
+  padding : 5px 0px;
+}
+
+section .faq {
+  background-color: #f0f0f0;  
+  padding:20px;
+  margin: 15px;  
+  overflow: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b24848;
+}
+
+section .faq h3{ 
+  text-align: center;
+  background-color: #b24848;
+  color: #fff;
+  font-family: Segoe UI;
+  margin:  -20px -20px 0px -20px  ;  
+}
+
+section .faq .faqPart{
+  padding: 20px;
+  margin: 20px 0px 20px 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b24848;
+}
+
+section .faq .faqPart .question{ 
+  margin: -20px -20px 0px -20px; 
+  padding: 5px;
+  list-style: none;
+  border:none;
+  border-bottom: 2px solid #b24848;
+  color:#b24848;
+  font-family: sans-serif;
+}
+
+section .faq input.search{
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: 10%;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+section .janji {
+  background-color: #f0f0f0;  
+  padding:20px;
+  margin: 15px;  
+  overflow: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b24848;
+}
+
+section .janji h3{ 
+  text-align: center;
+  background-color: #b24848;
+  color: #fff;
+  font-family: Segoe UI;
+  margin:  -20px -20px 0px -20px  ;  
+}
+
+section .janji .janjiPart{
+  padding: 20px;
+  margin: 20px 0px 20px 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b24848;
+}
+
+section .janji .janjiPart .konteksJanji{ 
+  margin: -20px -20px 0px -20px; 
+  padding: 5px;
+  list-style: none;
+  border:none;
+  border-bottom: 2px solid #b24848;
+  color:#b24848;
+  font-family: sans-serif;
+}
+
+section .janji input.search{
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: 10%;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+footer{
+  clear: both;
+  padding: 3px;
+  font-family: Segoe UI;
+  background-color: #444;
+  color: #fff;  
+  text-align: center;
+  box-shadow: 0px -5px 8px 0px black;
+}
+

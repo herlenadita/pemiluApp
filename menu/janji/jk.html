@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PemiluApp">
+<head>
+	<meta charset="UTF-8"></meta>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<div id="container" ng-controller="JanjisCtrl">
+		<div id="nav">
+			<ul>
+				<li><a href="../../index.html">Pemilu</a></li>
+				<li><a href="#">Profil</a>
+					<ul>
+						<li><a href="#">Capres</a>
+							<ul>
+								<li><a href="../profil/ps.html">Prabowo Subianto</a></li>
+								<li><a href="../profil/jw.html">Joko Widodo</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Cawapres</a>
+							<ul>
+								<li><a href="../profil/hr.html">Hatta Rajasa</a></li>
+								<li><a href="../profil/jk.html">Jusuf Kalla</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Janji</a>
+					<ul>
+						<li><a href="#">Capres</a>
+							<ul>
+								<li><a href="../janji/ps.html">Prabowo Subianto</a></li>
+								<li><a href="../janji/jw.html">Joko Widodo</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Cawapres</a>
+							<ul>
+								<li><a href="../janji/hr.html">Hatta Rajasa</a></li>
+								<li><a href="../janji/jk.html">Jusuf Kalla</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="../faq/faq.html">FAQ</a>
+			</ul>
+		</div>
+
+		<section>
+			<div class="janji">
+				<h3>JANJI JUSUF KALLA</h3>
+				<input class="search" type="text" ng-model="filterJanji" placeholder="Kata Pencarian">
+				<div ng-repeat="janji in jkJanji | filter:filterJanji">
+					<div class="janjiPart">
+						<div class="justify">
+							<div class="konteksJanji">
+								{{janji.context_janji}}
+							</div>
+							<blockquote>
+								{{janji.janji}}
+							</blockquote>
+						</div>
+					</div>				
+				</div>
+				<hr/>
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; Budi Wahyu Herlen A.</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="../../js/angularjs/angular.min.js"></script>
+	<script type="text/javascript" src="../../js/janji.js"></script>
+</body>
+</html>

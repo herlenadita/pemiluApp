@@ -1,0 +1,23 @@
+{
+  "name": "angulartutor",
+  "version": "0.0.0",
+  "authors": [
+    "herlenadita <herlenadita@gmail.com>"
+  ],
+  "description": "Learning Angular Basic",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
